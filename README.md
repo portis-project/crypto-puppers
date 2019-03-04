@@ -1,11 +1,16 @@
 # CryptoPuppers
 
-**Sample DApp powered by [Portis](https://portis.io)**
+<img src="https://i.imgur.com/C3KVJDw.png"/>
 
-[Try it out!](https://cryptopuppers.portis.io/)
+We created CryptoPuppers so anyone can have a look around and experience how [Portis](https://portis.io) intergrates with any decentralized application. Want to offer your users the same frictionless experience? Find out how in our [Documentation](https://docs.portis.io).
 
-## Setup Local Environment
+Now, let's adopt some puppers 😃
+
+https://cryptopuppers.portis.io/
+
+## Run it locally
 
 1. `git clone https://github.com/portis-project/crypto-puppers`
+1. `cd crypto-puppers`
 1. `npm install`
 1. `npm start`
