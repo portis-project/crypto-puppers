@@ -1,0 +1,15 @@
+.pupper-footer {
+  background: url('../../assets/images/footer-waves.png') center bottom no-repeat;
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 3.5em;
+    padding-top: 5em;
+
+    @media screen and (max-width: 500px) {
+      padding-bottom: 1.5em;
+    }
+  }
+}

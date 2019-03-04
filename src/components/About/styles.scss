@@ -1,0 +1,77 @@
+@import '../../assets/components/vars';
+
+.about-portis {
+  padding-top: 5em;
+  padding-right: 1em;
+  padding-left: 1em;
+  margin-top: 8em;
+  margin-bottom: 12em;
+  background: url('../../assets/images/floating-puppers.png') top right no-repeat;
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 4em;
+    margin-top: 4em;
+    padding-top: 2em;
+  }
+
+  .portis-heading {
+    margin-bottom: 4em;
+
+    h3 {
+      font-weight: bold;
+      font-family: 'futura-pt-bold';
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: rgba(map-get($colors, text), 0.8);
+    }
+  }
+
+  .about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .content {
+      width: 46%;
+      min-width: 300px;
+      margin-bottom: 2em;
+
+      h4 {
+        font-weight: bold;
+        font-family: 'futura-pt-bold';
+        font-size: 1.25em;
+        margin-bottom: 1.25em;
+      }
+
+      p {
+        line-height: 1.5em;
+        color: rgba(map-get($colors, text), 0.8);
+
+        &:not(:last-child) {
+          margin-bottom: 1.5em;
+        }
+
+        a {
+          color: rgba(map-get($colors, text), 0.8);
+          text-decoration: none;
+          display: inline-block;
+          padding: 0.05em 0.5em;
+          margin: 0 0.3em;
+          background: rgba(black, 0.03);
+          border-radius: 3px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+
+          &:hover {
+            background-color: map-get($colors, purple);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../assets/components/vars';
+
+.adoption-success {
+  padding: 1em;
+  color: map-get($colors, text);
+  font-family: 'futura-pt';
+
+  .adoption-success-title {
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+  }
+}

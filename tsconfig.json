@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["es2017", "dom"],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "pages/*": ["src/pages/*"]
+    }
+  },
+  "exclude": ["dist", "build", "migrations", "tests"]
+}

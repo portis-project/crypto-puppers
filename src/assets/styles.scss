@@ -1,0 +1,42 @@
+@import 'components/resets';
+@import 'components/font';
+@import 'components/vars';
+
+body,
+html {
+  font-family: 'futura-pt';
+  font-weight: 400;
+  font-size: 16px;
+
+  width: 100%;
+  min-height: 100%;
+  color: #2e1b40;
+}
+
+body {
+  background: url('images/header-waves.png') no-repeat top left;
+}
+
+.container {
+  max-width: 1150px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 3em 0 5em 0;
+  text-align: center;
+
+  h3 {
+    font-size: 1.25em;
+    color: rgba(map-get($colors, text), 0.8);
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    font-family: 'futura-pt-bold';
+    font-weight: bold;
+
+    font-size: 1.75em;
+  }
+}

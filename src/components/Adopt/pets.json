@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "name": "Sebastian",
+    "picture": "dog2.png"
+  },
+  {
+    "id": 1,
+    "name": "Apollo",
+    "picture": "dog4.png"
+  },
+  {
+    "id": 2,
+    "name": "Benji",
+    "picture": "dog1.png"
+  },
+  {
+    "id": 3,
+    "name": "Snuggles",
+    "picture": "dog6.png"
+  }
+]

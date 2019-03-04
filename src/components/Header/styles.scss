@@ -1,0 +1,146 @@
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 4em;
+
+  .branding {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      width: 45px;
+      height: 45px;
+      background-color: white;
+      border-radius: 45px;
+      margin-right: 1.5em;
+      z-index: 1;
+
+      overflow: hidden;
+      position: relative;
+
+      // Our doggo
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: url('../../assets/images/logo-pupper.png') center top no-repeat;
+        background-size: 100%;
+
+        animation: pupper 16s ease infinite;
+        animation-delay: 1.3s;
+
+        transform: translateY(50px);
+      }
+    }
+
+    p {
+      color: white;
+      font-size: 1.25em;
+    }
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    .network-name {
+      background-color: #f3f3f3;
+      border-radius: 3px;
+      padding: 0.25em 0.5em;
+      line-height: 1.25em;
+
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
+    }
+
+    .wallet-address {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        font-size: 0.75em;
+      }
+    }
+
+    .status-icon {
+      position: relative;
+      background: #68eb8b;
+
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin-left: 1em;
+
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background: rgba(#68eb8b, 0.3);
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+
+        animation: pulse 3s ease infinite;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// This is a silly use of css animation but it's just too cute!
+@keyframes pupper {
+  0% {
+    transform: translateY(50px);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0) rotateZ(-3deg);
+  }
+  30% {
+    transform: translateX(-4px) rotateZ(7deg);
+  }
+  40% {
+    transform: translateY(70px) translateX(-20px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateX(-70px) rotateZ(0deg);
+  }
+  51% {
+    transform: rotateZ(90deg) translateY(50px);
+  }
+  55% {
+    transform: rotateZ(90deg) translateY(0);
+  }
+  90% {
+    transform: rotateZ(45deg) translateY(10px) translateX(5px);
+  }
+  100% {
+    transform: translateX(-70px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1.65);
+  }
+}

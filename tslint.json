@@ -1,0 +1,14 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "no-console": false,
+    "ordered-imports": false,
+    "member-access": false,
+    "member-ordering": false,
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "interface-over-type-literal": false,
+    "max-classes-per-file": false
+  }
+}
