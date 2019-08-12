@@ -15,7 +15,7 @@ export default class Header extends React.Component {
     });
     const networkId = await web3.eth.net.getId();
     const networkName = web3networks[networkId].name;
-    const networkExplorer = web3networks[networkId].explorer;
+    const networkExplorer = web3networks[networkId].explorerAddress;
     this.setState({ networkName, networkExplorer });
   }
 

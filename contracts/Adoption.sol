@@ -1,11 +1,13 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
+import "tabookey-gasless/contracts/GsnUtils.sol";
+import "tabookey-gasless/contracts/IRelayHub.sol";
 import "tabookey-gasless/contracts/RelayRecipient.sol";
 
 contract Adoption is RelayRecipient {
-    constructor(address hub) public {
+    constructor(IRelayHub rhub) public {
         // this is the only hub I trust to receive calls from
-        init_relay_hub(RelayHub(hub));
+        setRelayHub(rhub);
     }
 
     // array of adopter ethereum wallet addresses
@@ -13,29 +15,35 @@ contract Adoption is RelayRecipient {
     address[4] public adopters;
 
     event adopted(address owner, uint petId);
+    event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
     // adopt one of pet
     function adopt(uint petId) public returns (uint) {
         // validation of pet id
-        require(petId >= 0 && petId <= 3, "Illegal pet id");
+        require(petId >= 0 && petId <= 15, "Illegal pet id");
 
-        // get_sender() = adopter ethereum wallet address
-        adopters[petId] = get_sender();
+        // getSender() = adopter ethereum wallet address
+        adopters[petId] = getSender();
 
-        emit adopted(get_sender(), petId);
+        emit adopted(getSender(), petId);
+        emit Transfer(getSender(), address(this), 1);
 
         // return same pet id as success confirmation
         return petId;
     }
 
-    function getAdopters() public returns (address[4]) {
+    function getAdopters() public returns (address[4] memory) {
         return adopters;
     }
 
-    function accept_relayed_call(address relay, address from, bytes memory encoded_function, uint gas_price, uint transaction_fee) public view returns(uint32) {
-        return 0;
+    function acceptRelayedCall(address relay, address from, bytes calldata encodedFunction, uint256 transactionFee, uint256 gasPrice, uint256 gasLimit, uint256 nonce, bytes calldata approvalData, uint256 maxPossibleCharge) external view returns (uint256, bytes memory) {
+        return (0, "");
     }
 
-    function post_relayed_call(address relay, address from, bytes memory encoded_function, bool success, uint used_gas, uint transaction_fee) public {
+    function preRelayedCall(bytes calldata context) /*relayHubOnly*/ external returns (bytes32) {
+        return bytes32(uint(123456));
+    }
+
+    function postRelayedCall(bytes calldata context, bool success, uint actualCharge, bytes32 preRetVal) /*relayHubOnly*/ external {
     }
 }

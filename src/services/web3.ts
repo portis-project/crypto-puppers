@@ -9,27 +9,31 @@ export const portis = new Portis(
 export const web3 = new Web3(portis.provider);
 
 export const web3networks: {
-  [key: number]: { name: string; explorer: string };
+  [key: string]: { name: string; explorerTx: string; explorerAddress: string };
 } = {
-  1: { name: "Ethereum", explorer: "https://etherscan.io" },
-  3: { name: "Ethereum (ropsten)", explorer: "https://ropsten.etherscan.io" },
-  4: {
+  "1": {
+    name: "Ethereum",
+    explorerTx: "https://etherscan.io/tx",
+    explorerAddress: "https://etherscan.io/address"
+  },
+  "3": {
+    name: "Ethereum (ropsten)",
+    explorerTx: "https://ropsten.etherscan.io/tx",
+    explorerAddress: "https://ropsten.etherscan.io/address"
+  },
+  "4": {
     name: "Ethereum (rinkeby)",
-    explorer: "https://blockscout.com/eth/rinkeby"
+    explorerTx: "https://blockscout.com/eth/rinkeby/tx",
+    explorerAddress: "https://blockscout.com/eth/rinkeby/address"
   },
-  5: {
+  "5": {
     name: "Ethereum (goerli)",
-    explorer: "https://blockscout.com/eth/goerli"
+    explorerTx: "https://blockscout.com/eth/goerli/tx",
+    explorerAddress: "https://blockscout.com/eth/goerli/address"
   },
-  42: {
+  "42": {
     name: "Ethereum (kovan)",
-    explorer: "https://blockscout.com/eth/kovan"
-  },
-  61: {
-    name: "Ethereum Classic",
-    explorer: "https://blockscout.com/etc/mainnet"
-  },
-  77: { name: "POA (sokol)", explorer: "https://blockscout.com/poa/sokol" },
-  99: { name: "POA", explorer: "https://blockscout.com/poa/core" },
-  100: { name: "XDAI", explorer: "https://blockscout.com/poa/dai" }
+    explorerTx: "https://blockscout.com/eth/kovan/tx",
+    explorerAddress: "https://blockscout.com/eth/kovan/address"
+  }
 };

@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "build": "npm run clean && NODE_ENV=production webpack --config webpack/prod.config.js --progress --colors",
-    "start": "NODE_ENV=development webpack-dev-server --config webpack/dev.config.js --port 3001 --progress --colors --open",
+    "start": "NODE_ENV=development webpack-dev-server --config webpack/dev.config.js --port 3002 --progress --colors --open",
     "clean": "rimraf dist",
     "truffle:deploy": "truffle compile && truffle migrate --reset --network"
   },
@@ -28,7 +28,8 @@
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
     "terser-webpack-plugin": "1.2.2",
-    "truffle-hdwallet-provider": "1.0.0-web3one.1",
+    "truffle": "5.0.31",
+    "truffle-hdwallet-provider": "1.0.16",
     "ts-jest": "23.10.5",
     "ts-loader": "5.3.3",
     "tslint": "5.12.1",
@@ -41,12 +42,11 @@
   },
   "dependencies": {
     "@babel/runtime": "7.3.1",
-    "@portis/web3": "2.0.0-beta.30",
+    "@portis/web3": "2.0.0-beta.34",
     "react": "16.8.1",
     "react-dom": "16.8.1",
     "react-toastify": "4.5.2",
-    "tabookey-gasless": "0.3.3-a",
-    "truffle-contract": "3.0.7",
+    "tabookey-gasless": "0.4.0-beta2",
     "web3": "1.0.0-beta.37"
   }
 }
