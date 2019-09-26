@@ -6,7 +6,7 @@ We created CryptoPuppers so anyone can have a look around and experience how [Po
 
 Now, let's adopt some puppers 😃
 
-https://cryptopuppers.portis.io/
+https://cryptopuppers.co/
 
 ## Run it locally
 
