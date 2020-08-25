@@ -69,7 +69,7 @@ const About: React.FunctionComponent = () => (
             anything, while still maintaining absolute control over their private key (Portis never sees the user’s
             password or unencrypted private key). In addition, thanks to Portis’ end-to-end encryption architecture,
             users enjoy a friendly cloud experience and can access the same account on all of their devices, through a
-            familiar email and password login flow.
+            familiar email and password login flow!
           </p>
         </div>
       </div>
